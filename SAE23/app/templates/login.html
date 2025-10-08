@@ -1,0 +1,47 @@
+{% block title %}{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<style>
+  /* Tu peux ajouter des styles supplémentaires ici si nécessaire */
+</style>
+
+
+<div class="login-container">
+  <div class="login-card" data-aos="zoom-in" data-aos-delay="100">
+    <div class="login-text-center">
+      <i class="bi bi-box-arrow-in-right"></i>
+      <h2>Connexion</h2>
+    </div>
+
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="login-alert login-alert-warning">
+          {% for message in messages %}
+            <div>{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+
+    <form method="post">
+      <div class="login-form-group mb-3">
+        <input name="username" class="login-form-control" placeholder="Nom d'utilisateur" required>
+      </div>
+      <div class="login-form-group mb-3">
+        <input name="password" type="password" class="login-form-control" placeholder="Mot de passe" required>
+      </div>
+      <button type="submit" class="login-btn login-square login-btn-primary login-lg">Se connecter</button>
+    </form>
+
+
+    <p class="login-mt-3">
+      Pas encore de compte ?<br>
+      <a class="login-te" href="{{ url_for('register') }}">Créer un compte</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+version: "3.8"
+# Version de Docker Compose utilisée
+
+services:
+  web:
+    build: ./app
+    # Construit l'image Docker à partir du Dockerfile situé dans le dossier ./app
+
+    container_name: flask_app
+    # Nom explicite donné au conteneur Flask
+
+    
+    ports:
+      - "5000:5000"
+      # Expose le port 5000 du conteneur sur le port 5000 de la machine hôte
+
+    environment:
+      - DATABASE_URL=postgresql://postgres:progtr00@db:5432/db
+      # URL de connexion à la base de données PostgreSQL
+
+      - FLASK_APP=app.py
+      # Nom du fichier principal de l'application Flask
+
+      - FLASK_ENV=development
+      # Mode développement pour Flask (avec rechargement automatique et débogage)
+
+    depends_on:
+      - db
+      # Assure que le service `db` (PostgreSQL) démarre avant `web`
+      # Cela ne garantit pas que la base soit "prête", d’où le script `wait-for-db.sh`
+
+    volumes:
+      - ./app:/app
+      # Monte le dossier local `./app` dans le conteneur à `/app`
+      # Permet d'avoir le code source accessible dynamiquement (utile en dev)
+
+  db:
+    image: postgres:13
+    # Utilise l'image officielle PostgreSQL version 13
+
+    container_name: postgres_db
+    # Nom explicite du conteneur de la base de données
+
+    restart: always
+    # Redémarre automatiquement le conteneur si nécessaire (plantage, reboot...)
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: progtr00
+      POSTGRES_DB: db
+      # Configuration de la base à la création (utilisateur, mot de passe, nom)
+
+    ports:
+      - "5432:5432"
+      # Expose le port 5432 de PostgreSQL à l’hôte
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # Persistance des données dans un volume Docker nommé `postgres_data`
+
+      - ./db/init:/docker-entrypoint-initdb.d
+      # Monte le dossier contenant `init_db.sql` dans le répertoire surveillé par PostgreSQL
+      # Tous les fichiers .sql dans ce dossier sont exécutés automatiquement au **premier** démarrage du volume
+
+volumes:
+  postgres_data:
+  # Déclaration du volume nommé `postgres_data`
+  # Utilisé pour conserver les données PostgreSQL même après arrêt du conteneur
