@@ -246,106 +246,51 @@
     <!-- Services Section -->
     <section id="services" class="services section">
 
-     <!-- ======================================================= -->
-<!-- SECTION COMPÉTENCES - BUT R&T Niveau 2                  -->
-<!-- ======================================================= -->
-<section id="competences" class="services section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Compétences du BUT Réseaux & Télécom - Niveau 2</h2>
-    <p>Cliquez sur une compétence pour ajouter vos informations, expériences ou projets associés.</p>
-  </div>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Compétences acquises et à acquérir</h2>
+        <p>Içi sont listées les compétences que acquise lors de ce semstre de BUT R&T et celle que je souhaiterai acquérir avant la fin du BUT.</p>
+      </div><!-- End Section Title -->
 
-  <div class="container">
-    <div class="row gy-4">
+{% block content %}
+<section id="resume" class="resume section">
 
-      <!-- 1. Administrer les réseaux et l'Internet -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-hdd-network"></i></div>
-          <h4><a href="#" data-bs-toggle="modal" data-bs-target="#modal1">Administrer les réseaux et l’Internet</a></h4>
-          <p>Configurer, superviser et maintenir des infrastructures réseau et Internet sécurisées.</p>
-        </div>
-      </div>
+     
 
-      <!-- 2. Connecter les entreprises et les usagers -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-people"></i></div>
-          <h4><a href="#" data-bs-toggle="modal" data-bs-target="#modal2">Connecter les entreprises et les usagers</a></h4>
-          <p>Mettre en place des solutions d’interconnexion, de téléphonie IP et d’accès au réseau.</p>
-        </div>
-      </div>
+      <div class="container">
 
-      <!-- 3. Créer des outils et applications -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-code-slash"></i></div>
-          <h4><a href="#" data-bs-toggle="modal" data-bs-target="#modal3">Créer des outils et applications informatiques</a></h4>
-          <p>Développer des scripts et applications pour automatiser la gestion des réseaux et des données.</p>
-        </div>
-      </div>
+        <div class="row">
 
-      <!-- 4. Gérer des projets R&T -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-kanban"></i></div>
-          <h4><a href="#" data-bs-toggle="modal" data-bs-target="#modal4">Gérer des projets R&T</a></h4>
-          <p>Planifier, organiser et piloter des projets techniques en équipe.</p>
-        </div>
-      </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">CV</h3>
 
-      <!-- 5. Accompagner la transformation numérique -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-building"></i></div>
-          <h4><a href="#" data-bs-toggle="modal" data-bs-target="#modal5">Accompagner la transformation numérique</a></h4>
-          <p>Proposer des solutions technologiques adaptées aux besoins d’une organisation.</p>
-        </div>
-      </div>
+            <div class="resume-item pb-0">
+<h2>Vos Compétences</h2>
 
-      <!-- 6. Concevoir des réseaux sécurisés -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-item position-relative">
-          <div class="icon"><i class="bi bi-shield-lock"></i></div>
-          <h4><a href="#" data-bs-toggle="modal" data-bs-target="#modal6">Concevoir des réseaux sécurisés</a></h4>
-          <p>Mettre en place des architectures réseau intégrant les normes de sécurité et de chiffrement.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<form method="post" action="/ajouter_competence" class="mb-3">
+  <input type="text" name="nom" placeholder="Nom de la compétence" class="form-control mb-2" required>
+  <input type="text" name="niveau" placeholder="Niveau" class="form-control mb-2" required>
+  <select name="semestre" class="form-control mb-2" required>
+    <option value="">-- Choisir un semestre --</option>
+    <option value="S1">S1</option>
+    <option value="S2">S2</option>
+    <option value="S3">S3</option>
+    <option value="S4">S4</option>
+  </select>
+  <button type="submit" class="btn btn-primary">Ajouter compétence</button>
+</form>
 
-<!-- ======================================================= -->
-<!-- MODALES DE SAISIE DES INFORMATIONS POUR CHAQUE COMPÉTENCE -->
-<!-- ======================================================= -->
 
-<!-- Exemple de structure : tu peux copier les 6 en changeant id / titre -->
-<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal1Label">Administrer les réseaux et l’Internet</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-      </div>
-      <div class="modal-body">
-        <form id="form1">
-          <div class="mb-3">
-            <label for="infos1" class="form-label">Vos notes / expériences :</label>
-            <textarea id="infos1" class="form-control" rows="4" placeholder="Exemples : TP VLAN, supervision, configuration routeur..."></textarea>
+
+
+
+           
+
           </div>
-          <button type="button" class="btn btn-primary" onclick="saveCompetence(1)">Enregistrer</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Copie pour les 5 autres modales -->
-<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header">
-    <h5 class="modal-title">Connecter les entreprises et les usagers</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
-    <div class="modal-body"><textarea id="infos2" class="form-control" row
+        </div>
+
+      </div>
 
     </section><!-- /CV Section -->
     
