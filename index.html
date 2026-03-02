@@ -422,7 +422,76 @@
 
 {% endblock %}
 <!-- Services Section (fermé dans ton code donc pas repris ici) -->
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 30px;
+}
 
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    color: white;
+    font-size: 16px;
+}
+
+.admin { background: #c0392b; }
+.connect { background: #d68910; }
+.program { background: #d4ac0d; }
+.secur { background: #7fbf3f; }
+.surveil { background: #1f3a93; }
+
+td {
+    font-size: 15px;
+}
+
+tr:hover td {
+    background: #f2f2f2;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Compétences BUT Réseaux & Télécoms — 2e année</h1>
+
+<table>
+    <tr>
+        <th class="admin">Administrer</th>
+        <th class="connect">Connecter</th>
+        <th class="program">Programmer</th>
+        <th class="secur">Sécuriser</th>
+        <th class="surveil">Surveiller</th>
+    </tr>
+
+    <tr>
+        <td>Administrer un réseau</td>
+        <td>Maîtriser les solutions de connexion des entreprises et des usagers</td>
+        <td>Développer une application R&T</td>
+        <td>Mettre en œuvre un système d'information sécurisé pour une petite structure</td>
+        <td>Mettre en œuvre le système de surveillance d'incidents de sécurité</td>
+    </tr>
+
+</table>
+
+</body>
 <!-- Testimonials Section -->
 <section id="testimonials" class="testimonials section light-background">
 
