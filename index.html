@@ -243,171 +243,131 @@
     <p>Voici les compétences officielles du BUT R&T (RNCP 35481), organisées par compétence majeure et niveau.</p>
   </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <table class="table table-bordered table-striped">
-      <thead class="table-dark">
-        <tr>
-          <th>Code</th>
-          <th>Compétence</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>R1</td>
-          <td>Administrer les réseaux et l’internet</td>
-          <td>Installer, configurer et maintenir les réseaux informatiques et services associés.</td>
-        </tr>
-        <tr>
-          <td>R2</td>
-          <td>Connecter les entreprises et les usagers</td>
-          <td>Déployer et entretenir les réseaux d’accès filaires, mobiles et sans fil.</td>
-        </tr>
-        <tr>
-          <td>R3</td>
-          <td>Sécuriser les réseaux et les systèmes</td>
-          <td>Mettre en œuvre des solutions garantissant la cybersécurité et la protection des infrastructures.</td>
-        </tr>
-        <tr>
-          <td>R4</td>
-          <td>Superviser les réseaux</td>
-          <td>Configurer des outils de supervision, diagnostiquer et corriger les anomalies.</td>
-        </tr>
-        <tr>
-          <td>R5</td>
-          <td>Intégrer des services réseaux</td>
-          <td>Installer et administrer des services comme VoIP, DNS, DHCP, serveurs applicatifs ou virtualisés.</td>
-        </tr>
-        <tr>
-          <td>R6</td>
-          <td>Concevoir des réseaux</td>
-          <td>Analyser les besoins d’une organisation et concevoir une architecture réseau adaptée.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-
-<!-- Services Section (fermé dans ton code donc pas repris ici) -->
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    padding: 30px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-th, td {
-    padding: 18px;
-    text-align: left;
-    border: 1px solid #ddd;
-    vertical-align: top;
-}
-
-th {
-    color: white;
-    text-align: center;
-    font-size: 16px;
-}
-
-.admin { background: #c0392b; }
-.connect { background: #d68910; }
-.program { background: #d4ac0d; }
-.secur { background: #7fbf3f; }
-.surveil { background: #1f3a93; }
-
-ul {
-    margin: 0;
-    padding-left: 18px;
-}
-
-tr:hover td {
-    background: #f2f2f2;
-}
-</style>
-</head>
-
-<body>
 <section id="competences-but" class="section light-background">
+
+  <style>
+    .admin { background: #c0392b; color: white; }
+    .connect { background: #d68910; color: white; }
+    .program { background: #d4ac0d; color: white; }
+    .secur { background: #7fbf3f; color: white; }
+    .surveil { background: #1f3a93; color: white; }
+
+    .accordion-button {
+      font-weight: 600;
+    }
+
+    #competences-but ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+  </style>
+
   <div class="container section-title" data-aos="fade-up">
     <h2>Compétences attendues — Fin de 2e année BUT Réseaux & Télécoms</h2>
   </div>
 
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-<table>
-    <tr>
-        <th class="admin">Administrer un réseau</th>
-        <th class="connect">Connecter</th>
-        <th class="program">Programmer</th>
-        <th class="secur">Sécuriser</th>
-        <th class="surveil">Surveiller</th>
-    </tr>
+    <div class="accordion" id="competencesAccordion">
 
-    <tr>
-        <td>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button admin collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#admin">
+            Administrer un réseau
+          </button>
+        </h2>
+        <div id="admin" class="accordion-collapse collapse" data-bs-parent="#competencesAccordion">
+          <div class="accordion-body">
             <ul>
-                <li>Configurer et administrer des équipements réseau (switch, routeur)</li>
-                <li>Gérer les services réseau (DHCP, DNS, VLAN)</li>
-                <li>Déployer un réseau local d’entreprise</li>
-                <li>Diagnostiquer et résoudre des incidents réseau</li>
-                <li>Appliquer les bonnes pratiques d’exploitation</li>
+              <li>Configurer switch et routeur</li>
+              <li>Mettre en place VLAN, DHCP, DNS</li>
+              <li>Déployer un réseau d’entreprise</li>
+              <li>Diagnostiquer les incidents réseau</li>
+              <li>Appliquer les bonnes pratiques d’exploitation</li>
             </ul>
-        </td>
+          </div>
+        </div>
+      </div>
 
-        <td>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button connect collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#connect">
+            Connecter
+          </button>
+        </h2>
+        <div id="connect" class="accordion-collapse collapse" data-bs-parent="#competencesAccordion">
+          <div class="accordion-body">
             <ul>
-                <li>Mettre en œuvre des solutions de connexion d’entreprise</li>
-                <li>Configurer routage IP et interconnexion de réseaux</li>
-                <li>Comprendre les architectures d’accès (LAN, WAN, Internet)</li>
-                <li>Optimiser la qualité de service réseau</li>
-                <li>Analyser les performances d’une infrastructure</li>
+              <li>Configurer routage IP</li>
+              <li>Interconnecter plusieurs réseaux</li>
+              <li>Comprendre LAN / WAN / Internet</li>
+              <li>Optimiser la qualité de service</li>
+              <li>Analyser les performances réseau</li>
             </ul>
-        </td>
+          </div>
+        </div>
+      </div>
 
-        <td>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button program collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#program">
+            Programmer
+          </button>
+        </h2>
+        <div id="program" class="accordion-collapse collapse" data-bs-parent="#competencesAccordion">
+          <div class="accordion-body">
             <ul>
-                <li>Développer une application simple liée aux réseaux ou télécoms</li>
-                <li>Utiliser un langage de programmation (Python, C, ou équivalent)</li>
-                <li>Interagir avec des services réseau par programmation</li>
-                <li>Appliquer les bases du génie logiciel</li>
-                <li>Documenter et tester une application</li>
+              <li>Développer en Python ou C</li>
+              <li>Créer scripts réseau</li>
+              <li>Interagir avec services réseau</li>
+              <li>Appliquer les bases du génie logiciel</li>
+              <li>Tester et documenter un programme</li>
             </ul>
-        </td>
+          </div>
+        </div>
+      </div>
 
-        <td>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button secur collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secur">
+            Sécuriser
+          </button>
+        </h2>
+        <div id="secur" class="accordion-collapse collapse" data-bs-parent="#competencesAccordion">
+          <div class="accordion-body">
             <ul>
-                <li>Identifier les vulnérabilités d’un système d’information</li>
-                <li>Mettre en place des mécanismes de protection (pare-feu, filtrage)</li>
-                <li>Sécuriser un réseau pour une petite structure</li>
-                <li>Appliquer les principes de la cybersécurité</li>
-                <li>Sensibiliser aux risques informatiques</li>
+              <li>Identifier les vulnérabilités</li>
+              <li>Configurer un pare-feu</li>
+              <li>Sécuriser une infrastructure</li>
+              <li>Appliquer les principes de cybersécurité</li>
+              <li>Sensibiliser aux risques informatiques</li>
             </ul>
-        </td>
+          </div>
+        </div>
+      </div>
 
-        <td>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button surveil collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#surveil">
+            Surveiller
+          </button>
+        </h2>
+        <div id="surveil" class="accordion-collapse collapse" data-bs-parent="#competencesAccordion">
+          <div class="accordion-body">
             <ul>
-                <li>Utiliser des outils de supervision réseau</li>
-                <li>Mettre en place une surveillance des incidents de sécurité</li>
-                <li>Analyser des journaux système et réseau</li>
-                <li>Détecter comportements anormaux</li>
-                <li>Produire des rapports de supervision</li>
+              <li>Utiliser un outil de supervision</li>
+              <li>Analyser les logs système</li>
+              <li>Détecter anomalies réseau</li>
+              <li>Surveiller incidents de sécurité</li>
+              <li>Produire des rapports</li>
             </ul>
-        </td>
-    </tr>
+          </div>
+        </div>
+      </div>
 
-</table>
+    </div>
+  </div>
+</section>
 
 </body>
 <!-- Testimonials Section -->
