@@ -363,64 +363,6 @@
         <p>Içi sont listées les compétences que acquise lors de ce semstre de BUT R&T et celle que je souhaiterai acquérir avant la fin du BUT.</p>
       </div><!-- End Section Title -->
 
-<section id="resume" class="resume section">
-
-     
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">CV</h3>
-
-            <div class="resume-item pb-0">
-<h2>Vos Compétences</h2>
-
-<form method="post" action="/ajouter_competence" class="mb-3">
-  <input type="text" name="nom" placeholder="Nom de la compétence" class="form-control mb-2" required>
-  <input type="text" name="niveau" placeholder="Niveau" class="form-control mb-2" required>
-  <select name="semestre" class="form-control mb-2" required>
-    <option value="">-- Choisir un semestre --</option>
-    <option value="S1">S1</option>
-    <option value="S2">S2</option>
-    <option value="S3">S3</option>
-    <option value="S4">S4</option>
-  </select>
-  <button type="submit" class="btn btn-primary">Ajouter compétence</button>
-</form>
-
-{% if competences %}
-<table class="table">
-  <thead>
-    <tr>
-      <th>Semestre</th>
-      <th>Nom</th>
-      <th>Niveau</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for comp in competences %}
-    <tr>
-      <td>{{ comp.semestre }}</td>
-      <td>{{ comp.nom }}</td>
-      <td>{{ comp.niveau }}</td>
-      <td>
-        <a href="{{ url_for('supprimer_competence', id=comp.id) }}" class="btn btn-sm btn-danger"
-           onclick="return confirm('Supprimer cette compétence ?')">Supprimer</a>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{% else %}
-  <p>Aucune compétence encore ajoutée.</p>
-{% endif %}
-
-<a href="/logout" class="btn btn-secondary mt-4">Se déconnecter</a>
-
-{% endblock %}
 <!-- Services Section (fermé dans ton code donc pas repris ici) -->
 <style>
 body {
